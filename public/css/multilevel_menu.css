@@ -1,0 +1,111 @@
+/* Menu Styles */
+
+.third-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.third-level-menu > li
+{
+    height: 30px;
+    background: #d5d5d5;
+    width: 100%;
+    padding: 10px;
+}
+.third-level-menu > li:hover { background: #e9e9e9; }
+
+.second-level-menu
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 270px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background: #333;
+}
+
+.second-level-menu::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    right: auto;
+    top: -16px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: transparent;
+    border-bottom-color: #d5d5d5;
+    opacity: 1;
+}
+
+.menu.header-menu ul.second-level-menu {
+    text-align: left;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    background: #d5d5d5;
+    width: 100%;
+    padding: 10px;
+}
+.second-level-menu > li:hover { background: #e9e9e9; }
+
+.top-level-menu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-level-menu > li
+{
+    position: relative;
+    float: left;
+}
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    padding: 0 0 0 10px;
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+.top-level-menu a:hover { color: #000000; }
+
+
+/* Custom style */
+.top-line nav li a {
+    padding: 0;
+}
+
+.top-line nav ul.second-level-menu li {
+    padding: 10px;
+}
+
+header nav li {
+    display: block;
+}
